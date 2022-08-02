@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Compile Include="Common.fs" />
+        <Compile Include="Javascript\Validation.fs" />
+        <Compile Include="Javascript\Conditions.fs" />
+        <Compile Include="Javascript\ValueMap.fs" />
+        <Compile Include="Javascript\Renderer.fs" />
+        <Compile Include="Html\Form.fs" />
+        <Compile Include="Html\Page.fs" />
+        <Compile Include="Html\Renderer.fs" />
+        <Compile Include="Renderer.fs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\ToolBox\ToolBox\ToolBox.fsproj" />
+      <ProjectReference Include="..\Forma\Forma.fsproj" />
+    </ItemGroup>
+
+</Project>

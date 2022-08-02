@@ -1,0 +1,39 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Forma", "Forma\Forma.fsproj", "{555B2935-AA28-42B2-A50A-B5E696267C20}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_external", "_external", "{98F8D2CF-21A5-4128-BAF6-AFCEE56276B1}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Forma.StaticForms", "Forma.StaticForms\Forma.StaticForms.fsproj", "{ED5CDA44-54C9-4B18-95CA-9ADA40306705}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Forma.App", "Forma.App\Forma.App.fsproj", "{ABBECE3F-A61E-4219-B16A-CD0C63C75408}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "ToolBox", "..\ToolBox\ToolBox\ToolBox.fsproj", "{DFF534A0-6AB5-4817-8DCF-62AE6EF16624}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{555B2935-AA28-42B2-A50A-B5E696267C20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{555B2935-AA28-42B2-A50A-B5E696267C20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{555B2935-AA28-42B2-A50A-B5E696267C20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{555B2935-AA28-42B2-A50A-B5E696267C20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED5CDA44-54C9-4B18-95CA-9ADA40306705}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED5CDA44-54C9-4B18-95CA-9ADA40306705}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED5CDA44-54C9-4B18-95CA-9ADA40306705}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED5CDA44-54C9-4B18-95CA-9ADA40306705}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ABBECE3F-A61E-4219-B16A-CD0C63C75408}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ABBECE3F-A61E-4219-B16A-CD0C63C75408}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ABBECE3F-A61E-4219-B16A-CD0C63C75408}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ABBECE3F-A61E-4219-B16A-CD0C63C75408}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFF534A0-6AB5-4817-8DCF-62AE6EF16624}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFF534A0-6AB5-4817-8DCF-62AE6EF16624}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFF534A0-6AB5-4817-8DCF-62AE6EF16624}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFF534A0-6AB5-4817-8DCF-62AE6EF16624}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DFF534A0-6AB5-4817-8DCF-62AE6EF16624} = {98F8D2CF-21A5-4128-BAF6-AFCEE56276B1}
+	EndGlobalSection
+EndGlobal
