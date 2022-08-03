@@ -35,11 +35,6 @@ module ValueMap =
 
     let renderValueMaps (form: Form) =
 
-        let rec getFields (element: Element) =
-            match element with
-            | Field f -> [ f ]
-            | Branch b -> b.Elements |> List.collect getFields
-
         let map =
             match form.Body with
             | FormBody.Pages pages -> pages |> List.collect (fun p -> p.Elements)

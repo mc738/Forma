@@ -2,11 +2,12 @@
 
 
 module Validation =
-    
+
     open System
     open System.IO
-    open Forma.Forms
     open ToolBox.Core.Strings
+    open Forma.Forms
+    open Forma.StaticForms
 
     let idToName (id: string) = id.ToCamelCase()
 
@@ -120,17 +121,17 @@ module Validation =
 
         let (fns, cases, checks) =
             page.Elements
-            |> List.choose (fun e ->
-                match e with
-                | Element.Field f -> Some f
-                | _ -> None)
-            |> List.map (fun f ->
-                let case =
-                    [ $"case '{f.Id}':"
-                      $"    return {f.Id.ToCamelCase()}RecheckValidation();" ]
+            |> List.map getFields
+            |> List.concat
+            |> List.choose (fun f ->
+                match f.Validation.IsEmpty with
+                | true -> None
+                | false ->
+                    let case =
+                        [ $"case '{f.Id}':"
+                          $"    return {f.Id.ToCamelCase()}RecheckValidation();" ]
 
-                (generateFieldValidation f, case, $"{f.Id.ToCamelCase()}Validation()"))
-
+                    Some(generateFieldValidation f, case, $"{f.Id.ToCamelCase()}Validation()"))
             |> List.fold
                 (fun (fns, cases, checks) (fn, case, check) -> fns @ [ fn ], cases @ case, checks @ [ check ])
                 ([], [], [])
@@ -149,7 +150,10 @@ module Validation =
               "" ]
 
 
-        fns |> String.concat Environment.NewLine, pageValidation |> String.concat Environment.NewLine, cases
+        fns |> String.concat Environment.NewLine,
+        pageValidation
+        |> String.concat Environment.NewLine,
+        cases
 
 
     let generatePagesValidations (pages: FormPage list) =
@@ -199,4 +203,3 @@ module Validation =
 
     let render (outputPath: string) (pages: FormPage list) =
         File.WriteAllText(Path.Combine(outputPath, "validation.js"), generatePagesValidations pages)
-

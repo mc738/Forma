@@ -6,8 +6,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <Compile Include="Library.fs" />
         <Compile Include="Forms.fs" />
+        <Compile Include="Validation.fs" />
+        <Compile Include="Serialization.fs" />
     </ItemGroup>
 
     <ItemGroup>

@@ -64,7 +64,7 @@ module Form =
                     "            <p>Next ></p>"
                     "        </button>" ]
               | None ->
-                  [ $"        <button class=\"control-button\">"
+                  [ $"        <button class=\"control-button\" onclick=\"submit()\">"
                     "            <p>Submit</p>"
                     "        </button>" ]
           "    </div>"
