@@ -27,7 +27,7 @@ module Conditions =
           "    if (branchTests(branchId)) {"
           "        branchElements.forEach(x => {"
           "            x.dataset.disabled = 0;"
-          "            document.getElementById(`${x.id}-container`).style.display = 'block';"
+          "            document.getElementById(`${x.id}-container`).style.display = 'flex';"
           "        })"
           "    }"
           "    else {"

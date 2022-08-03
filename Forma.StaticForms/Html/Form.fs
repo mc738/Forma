@@ -36,7 +36,7 @@ module Form =
                   "</div>" ]
 
             | Element.Branch b ->
-                [ $"<div class=\"{b.Id}\">"
+                [ $"<div id=\"{b.Id}\">"
                   yield!
                       generateElements (Some b.Id) b.Elements
                       |> List.map (indent 1)
@@ -98,8 +98,8 @@ module Form =
                 else
                     "progress-item"
 
-            [ $"<div id=\"page-{i + 1}-progress\" class=\"{classes}\">"
-              $"    <p><span>{i + 1}</span>{p.Title}</p>"
+            [ $"<div id=\"{p.Id}-progress\" class=\"{classes}\">"
+              $"    <p><span>{i + 1}</span> {p.Title}</p>"
               "</div>" ])
         |> List.concat
         |> fun r ->

@@ -42,6 +42,6 @@ module JsonTest =
 //JsonTest.run ()
 
 
-match Serialization.deserializeFile "C:\\Users\\44748\\Projects\\__prototypes\\forms\\example_form.json" with
+match Serialization.deserializeFile "C:\\Users\\44748\\Projects\\__prototypes\\forms\\contact_form.json" with
 | Ok form -> StaticFormsRenderer.run "C:\\Users\\44748\\Projects\\__prototypes\\forms" form
 | Error e -> printfn $"Error! {e}"
